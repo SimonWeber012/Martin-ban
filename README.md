@@ -2,88 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Opice</title>
+  <title>Surprise! 🍌</title>
   <style>
     body {
-      background-color: #1a0a00;
+      margin: 0;
+      background: #1a0a00;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
-      flex-direction: column;
-    }
-
-    .opice-container {
-      position: relative;
+      min-height: 100vh;
+      font-family: Arial;
       text-align: center;
     }
 
-    .opice-emoji {
-      font-size: 200px;
-      animation: houpani 1s ease-in-out infinite;
-      display: block;
-    }
-
-    @keyframes houpani {
-      0%   { transform: rotate(-10deg); }
-      50%  { transform: rotate(10deg); }
-      100% { transform: rotate(-10deg); }
-    }
-
     .bublina {
-      position: absolute;
-      top: -60px;
-      left: 50%;
-      transform: translateX(-50%);
       background: white;
       color: #333;
-      padding: 12px 20px;
+      padding: 16px 28px;
       border-radius: 20px;
-      font-size: 18px;
+      font-size: 22px;
       font-weight: bold;
-      white-space: nowrap;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      animation: skakani 0.6s ease-in-out infinite alternate;
     }
 
-    /* Šipka bubliny dolů */
-    .bublina::after {
-      content: '';
-      position: absolute;
-      bottom: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 6px solid transparent;
-      border-top-color: white;
-    }
-
-    .banany {
-      font-size: 40px;
-      margin-top: 20px;
-      animation: padani 0.5s ease-in-out infinite alternate;
-    }
-
-    @keyframes padani {
+    @keyframes skakani {
       0%   { transform: translateY(0px); }
-      100% { transform: translateY(10px); }
+      100% { transform: translateY(-10px); }
     }
 
-    h2 {
+    .bublina::after {
+      content: '▼';
+      display: block;
+      color: white;
+      font-size: 24px;
+      margin-top: 8px;
+    }
+
+    img {
+      width: 420px;
+      border-radius: 20px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+      animation: rotace 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes rotace {
+      0%   { transform: rotate(-3deg) scale(1); }
+      100% { transform: rotate(3deg) scale(1.03); }
+    }
+
+    h1 {
       color: #ffaa00;
-      font-family: Arial;
-      margin-top: 20px;
+      font-size: 28px;
+      margin-top: 24px;
+    }
+
+    p {
+      color: #aaa;
+      font-size: 16px;
     }
   </style>
 </head>
 <body>
 
-  <div class="opice-container">
-    <div class="bublina">Máš ho? Espresso macchiato por favére! ☕</div>
-    <span class="opice-emoji">🐒</span>
+  <div class="bublina">
+    Máš ho? Espresso macchiato por favére! ☕🍌
   </div>
 
-  <div class="banany">🍌🍌🍌</div>
-  <h2>Děkuji za stažení!</h2>
+  <img src="opice.jpg" alt="Opice">
+
+  <h1>Děkuji za stažení! 🎉</h1>
+  <p>Teď jdi udělat kafe. 🐒</p>
 
 </body>
 </html>
